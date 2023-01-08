@@ -1,0 +1,12 @@
+<div class="button-container">
+    <a href="{{ .Get 0 | safeHTML }}" class="button-link">
+        <span class="button">
+            {{ with (.Get 2) }}
+            <img src="{{ path.Join "/icons" . | safeHTML }}.svg" class="button-icon" />
+            {{ end }}
+            {{ with (.Get 1) }}
+            <span class="button-text">{{ . | markdownify }}</span>
+            {{ end }}
+        </span>
+    </a>
+</div>

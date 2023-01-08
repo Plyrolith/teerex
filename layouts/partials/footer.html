@@ -1,0 +1,14 @@
+<div id="footer">
+    <ul id="footer-menu" class="menu">
+        <li id="copyright" class="footer-item">© {{ now.Format "2006"}} {{ .Site.Copyright }}</li>
+        {{ range .Site.Menus.footer }}
+        <li class="footer-item">
+            <a class="nav-link" href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+<script src="/js/glightbox.js"></script>

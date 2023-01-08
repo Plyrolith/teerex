@@ -1,0 +1,16 @@
+{{ with (.Get 1) }}
+<div class="grid" style='--columns: {{ . }}'>
+{{ else }}
+<div class="grid full-width">
+{{ end }}
+  {{ range .Site.Pages.RelatedTo (keyVals "tags" (.Get 0)) }}
+  <a href="{{ .RelPermalink | safeHTML -}}">
+    <div class="grid-post" style="--background-image: url({{ path.Join .RelPermalink .Page.Params.Cover | safeHTML -}});">
+      <div class="grid-text">
+        <h2 class="grid-title">{{ .Title }}</h2>
+        <p>{{ .Summary | plainify | htmlUnescape }}</p>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</div>

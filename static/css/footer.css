@@ -1,0 +1,26 @@
+#footer {
+    width: 100%;
+    background-color: #222;
+}
+
+#footer-menu {
+    margin: 0;
+    padding: 2rem;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+}
+
+#footer-menu .footer-item {
+    display: inline-block;
+}
+
+#footer-menu li + li {
+    margin-left: 1rem;
+}
+
+#footer-menu #copyright {
+    float: left;
+    text-align: left;
+}

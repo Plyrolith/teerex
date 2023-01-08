@@ -1,0 +1,24 @@
+{{ define "hero" }}
+<div id="hero">
+  <div id="hero-media">
+    {{ if .Site.Params.Herovideo }}
+    <video autoplay muted loop id="hero-video-home">
+      <source src="{{ .Site.Params.Herovideo }}" type="video/mp4">
+    </video>
+    {{ else if .Site.Params.Heroimage }}
+    <img src="{{ .Site.Params.Heroimage }}" id="hero-image-home" />
+    {{ end }}
+  </div>
+  <div id="hero-header-home">
+    <h1 id="hero-title-home">{{ .Site.Title }}</h1>
+    {{ if .Site.Params.Description }}
+    <p id="hero-description">{{ .Site.Params.Description }}</p>
+    {{ end }}
+  </div>
+  <script src="/js/hero.js"></script>
+  <div id="hero-spacer-home"></div>
+</div>
+{{ end }}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

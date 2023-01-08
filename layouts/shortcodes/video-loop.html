@@ -1,0 +1,10 @@
+<a href="{{ (.Get 0) | safeHTML -}}" class="glightbox" data-gallery="{{ .Page.File.UniqueID }}">
+  <figure class="video-figure media-figure">
+    <video autoplay muted loop class="video-player media">
+      <source src="{{ (.Get 0) | safeHTML -}}" type="video/mp4">
+    </video>
+    {{- with (.Get 1) -}}
+    <figcaption>{{ . }}</figcaption>
+    {{- end -}}
+  </figure>
+</a>

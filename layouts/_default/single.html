@@ -1,0 +1,22 @@
+{{ define "hero" }}
+{{ if (isset .Params "heroimage") }}
+<div id="hero">
+  <div id="hero-media">
+    <img src="{{ .Params.Heroimage }}" id="hero-image-page" />
+  </div>
+  <div id="hero-header-page">
+    <h1 id="hero-title-page" class="title">{{ .Title }}</h1>
+  </div>
+  <div id="hero-spacer-page"></div>
+</div>
+{{ end }}
+{{ end }}
+{{ define "main" }}
+{{ if not (isset .Params "heroimage") }}
+<div class="nav-spacer"></div>
+<h1 class="title">{{ .Title }}</h1>
+{{ end }}
+<!-- {{ partial "metadata.html" . }}
+<br><br> -->
+{{ .Content }}
+{{ end }}

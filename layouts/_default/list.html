@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="nav-spacer"></div>
+{{ range .Pages.ByPublishDate.Reverse }}
+<div class="post">
+  <a href="{{ .RelPermalink | safeHTML -}}"><h1 class="post-title">{{ .Title }}</h1></a>
+  {{ if isset .Page.Params "cover" }}
+  <a href="{{ .RelPermalink | safeHTML -}}">
+    <div class="post-image-container">
+      <img src="{{ path.Join .RelPermalink .Page.Params.Cover | safeHTML -}}" class="post-image" alt="">
+    </div>
+  </a>
+  {{ end }}
+  <a href="{{ .RelPermalink | safeHTML -}}">
+    <p>{{ .Summary | plainify | htmlUnescape }}</p>
+  </a>
+</div>
+{{ end }}
+{{ end }}

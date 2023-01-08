@@ -1,0 +1,18 @@
+.media-figure, .youtube-player {
+    margin: 0 0 1rem 0;
+}
+
+.media {
+    width: 100%;
+}
+
+.image-media {
+    display: block;
+}
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}

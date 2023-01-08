@@ -1,0 +1,51 @@
+.nav-spacer {
+    margin-top: 6rem;
+}
+
+#nav {
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #222;
+    position: fixed;
+    line-height: 2rem;
+    z-index: 1;
+}
+
+#nav-bar {
+    margin: 1rem;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+
+#nav-logo {
+    float: left;
+}
+
+#nav-logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#nav-logo img {
+    max-height: 2rem;
+}
+
+#nav-menu {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: 500;
+}
+
+#nav-menu .menu-item {
+    display: inline-block;
+}
+
+#nav-menu li + li {
+    margin-left: 1rem;
+}
+
+#nav-menu a {
+    text-decoration: none;
+}

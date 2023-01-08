@@ -1,0 +1,7 @@
+{{ with (.Get 0) }}
+<div class="gallery" style='--columns: {{ . }}'>
+{{ else }}
+<div class="gallery full-width">
+{{ end }}
+{{.Inner}}
+</div>

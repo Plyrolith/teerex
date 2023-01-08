@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  display: block;
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "League Spartan", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+p img {
+  max-width: 100%;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-left: solid #eee;
+  border-width: 0.2rem;
+  background-color: #222;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", Times, serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.6rem;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #36a9f4;
+  transition: color 240ms;
+}
+
+#content {
+  background-color: #111;
+}
+
+#page-content {
+  /* display: flex; */
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem;
+}

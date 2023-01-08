@@ -1,0 +1,48 @@
+/* EB Garamond */
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url(/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400 800;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url(/fonts/EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 400 800;
+}
+
+/* League Spartan*/
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url(/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+}
+
+/* Roboto Flex */
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url(/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf) format('truetype');
+    font-weight: 100 1000;
+}
+
+/* Roboto Mono*/
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 100 700;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 100 700;
+}

@@ -1,0 +1,12 @@
+name = "Teerex"
+license = "MIT"
+licenselink = "https://github.com/Plyrolith/teerex/blob/master/LICENSE"
+description = ""
+homepage = "http://tristanweis.com/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Tristan Weis"
+  homepage = "https://tristanweis.com"
