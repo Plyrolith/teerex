@@ -1,8 +1,5 @@
-<figure class="audio-figure media-figure">
+<div class="audio-container media-container">
   <audio controls preload="{{ .Get "preload" | default "metadata" }}" class="audio-player media">
     <source src="{{ (.Get 0) | safeHTML -}}" type="audio/mpeg">
   </audio>
-  {{- with (.Get 1) -}}
-  <figcaption>{{ . }}</figcaption>
-  {{- end -}}
-</figure>
+</div>

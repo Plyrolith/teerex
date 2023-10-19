@@ -1,8 +1,5 @@
-<a href="{{ (.Get 0) | safeHTML -}}" class="glightbox" data-gallery="{{ .Page.File.UniqueID }}">
-  <figure class="image-figure media-figure">
+<div class="image-container media-container">
+  <a href="{{ (.Get 0) | safeHTML -}}" data-fslightbox="gallery" data-gallery="{{ .Page.File.UniqueID }}">
     <img src="{{ (.Get 0) | safeHTML -}}" class="image-media media" />
-    {{ with (.Get 1) }}
-    <figcaption>{{ . }}</figcaption>
-    {{ end }}
-  </figure>
-</a>
+  </a>
+</div>

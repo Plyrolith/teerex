@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    {{- partial "glightbox.html" . -}}
     <body>
         {{- block "hero" . }}{{- end }}
         {{- partial "header.html" . -}}
@@ -11,5 +10,6 @@
             </div>
         </div>
         {{- partial "footer.html" . -}}
+        {{- partial "fslightbox.html" . -}}
     </body>
 </html>
