@@ -2,6 +2,10 @@
     margin: 0 0 1rem 0;
 }
 
+.gallery div.media-container {
+    margin: 0;
+}
+
 .media {
     width: 100%;
 }
