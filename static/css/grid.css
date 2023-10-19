@@ -47,13 +47,12 @@
 }
 
 .full-width {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
 @media screen and (min-width: 560px) {

@@ -1,9 +1,6 @@
-.media-container, .youtube-player {
-    margin: 0 0 1rem 0;
-}
-
-.gallery div.media-container {
-    margin: 0;
+.gallery .media-container {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .media {
@@ -20,3 +17,10 @@
     height: 0;
     overflow: hidden;
 }
+
+@media screen and (max-width: 48rem) {
+    .gallery, .media-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+  }
