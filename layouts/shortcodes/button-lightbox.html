@@ -1,5 +1,5 @@
 <div class="button-container">
-    <a href="{{ .Get 0 | safeHTML }}" class="button-link glightbox">
+    <a href="{{ .Get 0 | safeHTML }}" class="button-link fslightbox">
         <span class="button">
             {{ with (.Get 2) }}
             <img src="{{ path.Join "/icons" . | safeHTML }}.svg" class="button-icon" />

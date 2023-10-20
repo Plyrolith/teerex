@@ -38,7 +38,7 @@ Parameters:
 
 ### `button` / `button-blank` / `button-lightbox`
 Display given link as a button.
-Use variations to open it in a new tab or in *GLightbox*.
+Use variations to open it in a new tab or in *fslightbox*.
 Parameters:
 - href, absolute or relative to current page
 - text (optional)
@@ -75,7 +75,7 @@ Parameters:
 ```
 
 ### `image`
-Display a single image and make it available for *GLightbox*.
+Display a single image and make it available for *fslightbox*.
 Parameters:
 - href, absolute or relative to current page
 
