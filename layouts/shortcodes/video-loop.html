@@ -1,6 +1,6 @@
 <div class="video-container media-container">
   <a href="{{ (.Get 0) | safeHTML -}}" data-fslightbox="gallery" data-gallery="{{ .Page.File.UniqueID }}">
-    <video autoplay muted loop class="video-player media">
+    <video playsinline autoplay muted loop class="video-player media">
       <source src="{{ (.Get 0) | safeHTML -}}" type="video/mp4">
     </video>
   </a>

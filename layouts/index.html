@@ -2,7 +2,7 @@
 <div id="hero">
   <div id="hero-media">
     {{ if .Site.Params.Herovideo }}
-    <video autoplay muted loop id="hero-video-home">
+    <video playsinline autoplay muted loop id="hero-video-home">
       <source src="{{ .Site.Params.Herovideo }}" type="video/mp4">
     </video>
     {{ else if .Site.Params.Heroimage }}
