@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.1rem;
   line-height: 2rem;
-  margin: 1.5rem 0 1rem 0;
+  margin: 1.7rem 0 1.5rem 0;
 }
 
 p {
@@ -63,7 +63,7 @@ a:hover {
 }
 
 #page-content {
-  padding-top: 1rem;
+  padding-top: 1px;
   padding-bottom: 1rem;
 }
 
