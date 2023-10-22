@@ -38,17 +38,19 @@ blockquote {
   border-left: solid #eee;
   border-width: 0.2rem;
   background-color: #222;
-  p, li {
-    margin: 0;
-    padding: 0.5rem 0;
-    font-family: "EB Garamond", Times, serif;
-    font-size: 1.2rem;
-    font-weight: 200;
-    line-height: 1.6rem;
-  }
-  ul {
-    margin: 0;
-  }
+}
+
+blockquote p, blockquote li {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-family: "EB Garamond", Times, serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.6rem;
+}
+
+blockquote ul {
+  margin: 0;
 }
 
 .highlight {
@@ -56,10 +58,11 @@ blockquote {
   margin-bottom: 2rem;
   padding: 2rem !important;
   background-color: #222;
-  pre {
-    background-color: #222 !important;
-    margin: 0;
-  }
+}
+
+.highlight pre {
+  background-color: #222 !important;
+  margin: 0;
 }
 
 a {
@@ -78,19 +81,22 @@ a:hover {
 #page-content {
   padding-top: 1px;
   padding-bottom: 1rem;
-  > table {
-    width: 100%;
-  }
-  > ul {
-    padding-left: 2rem !important;
-  }
-  > :not(.full-width) {
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
+}
+
+#page-content > table {
+  width: 100%;
+}
+
+#page-content > ul {
+  padding-left: 2rem !important;
+}
+
+#page-content > :not(.full-width) {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media screen and (max-width: 50rem) {
