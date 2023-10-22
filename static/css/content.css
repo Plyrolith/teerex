@@ -75,7 +75,14 @@ a:hover {
 }
 
 @media screen and (max-width: 50rem) {
-  #page-content > :not(.full-width, .gallery, .grid, .infosheet-container, .media-container) {
+  #page-content > :not(
+    .full-width,
+    .gallery,
+    .grid,
+    .infosheet-container,
+    .media-container,
+    .table-container
+  ){
     margin-left: 1rem;
     margin-right: 1rem;
   }

@@ -104,6 +104,13 @@ Replacement of the built-in shortcode to fit the theme better; same funtionality
 Parameters:
 - video ID
 
+### `table` | `th` | `tr`
+Easy table creation with automated styling. Nested `th` shortcode will be displayed as header, nested `tr` shortcodes will be displayed as rows.
+
 ```
-{{< youtube xzyxzyxzyxy >}}
+{{< table >}}
+{{< th Fruit Price Amount >}}
+{{< tr Apple "1$" 7 >}}
+{{< tr Pear "2$" 2 >}}
+{{< /table >}}
 ```

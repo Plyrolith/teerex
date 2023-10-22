@@ -1,0 +1,27 @@
+.table-container {
+    font-size: 0.8rem;
+    table-layout: fixed;
+    margin: 1.5rem 0;
+}
+
+.shortcode-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+.shortcode-cell {
+    padding: 1rem;
+    border: 0.1rem solid;
+    border-color: #111;
+    background-color: #222;
+}
+
+/* .shortcode-row .shortcode-cell:first-child {
+    text-align: right;
+} */
+
+.shortcode-header {
+    font-weight: bold;
+    background-color: #333;
+}

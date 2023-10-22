@@ -1,0 +1,12 @@
+<tr class="shortcode-row">
+    {{ $nb_cells := (len .Params) }}
+    {{ range $i, $data := .Params }}
+        {{ if and (eq $nb_cells 2) (eq $i 0) }}
+            <td class="shortcode-data shortcode-cell" style="text-align: right; font-weight: bold;">
+        {{ else }}
+            <td class="shortcode-data shortcode-cell">
+        {{ end }}
+        {{ $data | markdownify | safeHTML }}
+        </td>
+    {{ end }}
+</tr>
