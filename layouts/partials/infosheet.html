@@ -9,18 +9,6 @@
         {{ with .Params.format }}
             {{ partial "inforow.html" (dict "label" "Format" "icon" "movie" "content" .) }}
         {{ end }}
-        {{ with .Params.release }}
-            {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
-        {{ end }}
-        {{ with .Params.awards }}
-            {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
-        {{ end }}
-        {{ with .Params.disciplines }}
-            {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
-        {{ end }}
-        {{ with .Params.software }}
-            {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
-        {{ end }}
         {{ with .Params.credits }}
             <tr class="infosheet-row">
                 <td class="infosheet-cell infosheet-label">
@@ -43,6 +31,18 @@
                     </table>
                 </td>
             </tr>
+        {{ end }}
+        {{ with .Params.release }}
+            {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
+        {{ end }}
+        {{ with .Params.awards }}
+            {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
+        {{ end }}
+        {{ with .Params.disciplines }}
+            {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
+        {{ end }}
+        {{ with .Params.software }}
+            {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
         {{ end }}
     </table>
 </div>
