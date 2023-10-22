@@ -15,7 +15,12 @@
     border-color: #111;
 }
 
-.infosheet-label {   
+.infosheet-label, .cast-label{
+    text-align: right;
+    font-weight: bold;
+}
+
+.infosheet-label {
     background-color: #222;
 }
 
@@ -33,4 +38,8 @@
     height: 1.2rem;
     vertical-align: middle;
     filter: invert(100%);
+}
+
+.cast-cell {
+    padding: 0.2rem;
 }

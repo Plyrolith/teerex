@@ -1,0 +1,52 @@
+<div class="infosheet-container">
+    <table class="infosheet-table">
+        {{ with .Params.target }}
+            {{ partial "inforow.html" (dict "label" " " "icon" "bullseye" "content" .) }}
+        {{ end }}
+        {{ with .Params.contractor }}
+            {{ partial "inforow.html" (dict "label" "Contractor" "icon" "star" "content" .) }}
+        {{ end }}
+        {{ with .Params.format }}
+            {{ partial "inforow.html" (dict "label" "Format" "icon" "movie" "content" .) }}
+        {{ end }}
+        {{ with .Params.release }}
+            {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
+        {{ end }}
+        {{ with .Params.awards }}
+            {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
+        {{ end }}
+        {{ with .Params.disciplines }}
+            {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "medal" "content" .) }}
+        {{ end }}
+        {{ with .Params.software }}
+            {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
+        {{ end }}
+        {{ with .Params.credits }}
+            <tr class="infosheet-row">
+                <td class="infosheet-cell infosheet-label">
+                    Credits
+                </td>
+                <td class="infosheet-cell infosheet-iconcell">
+                    <img src="/icons/account-group.svg" class="infosheet-icon" />
+                </td>
+                <td class="infosheet-cell infosheet-content">
+                    <table class="cast-table">
+                        {{ $i := 0 }}
+                        {{ range . }}
+                            {{ $rest := mod $i 2 }}
+                            {{ if eq $rest 0 }}
+                                <tr class="cast-row">
+                                    <td class="cast-label cast-cell">{{ . }}:</td>
+                            {{ end }}
+                            {{ if eq $rest 1 }}
+                                    <td class="cast-content cast-cell">{{ . }}</td>
+                                </tr>
+                            {{ end }}
+                            {{ $i = add $i 1 }}
+                        {{ end }}
+                    </table>
+                </td>
+            </tr>
+        {{ end }}
+    </table>
+</div>

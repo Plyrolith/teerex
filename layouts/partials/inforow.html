@@ -1,0 +1,11 @@
+<tr class="infosheet-row">
+    <td class="infosheet-cell infosheet-label">
+        {{ .label | markdownify | safeHTML }}
+    </td>
+    <td class="infosheet-cell infosheet-iconcell">
+        <img src="{{ path.Join "/icons" .icon | safeHTML }}.svg" class="infosheet-icon" />
+    </td>
+    <td class="infosheet-cell infosheet-content">
+        {{ .content | markdownify | safeHTML }}
+    </td>
+</tr>

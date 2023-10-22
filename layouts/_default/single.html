@@ -17,7 +17,8 @@
 <div class="nav-spacer"></div>
 <h1 class="title">{{ .Title }}</h1>
 {{ end }}
-<!-- {{ partial "metadata.html" . }}
-<br><br> -->
+{{ if (isset .Params "infosheet")}}
+{{ partial "infosheet.html" . }}
+{{ end}}
 {{ .Content }}
 {{ end }}

@@ -1,8 +1,0 @@
-tr td:first-child, tr th:first-child {
-    text-align: right;
-    font-weight: bold;
-}
-
-td {
-    padding: 0.2rem;
-}
