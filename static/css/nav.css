@@ -19,16 +19,14 @@
 
 #nav-logo {
     float: left;
-}
-
-#nav-logo a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-#nav-logo img {
-    max-height: 2rem;
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    img {
+        max-height: 2rem;
+    }
 }
 
 #nav-menu {
@@ -36,16 +34,13 @@
     padding: 0;
     text-align: right;
     font-weight: 500;
-}
-
-#nav-menu .menu-item {
-    display: inline-block;
-}
-
-#nav-menu li + li {
-    margin-left: 1rem;
-}
-
-#nav-menu a {
-    text-decoration: none;
+    a {
+        text-decoration: none;
+    }
+    li + li {
+        margin-left: 1rem;
+    }
+    .menu-item {
+        display: inline-block;
+    }
 }
