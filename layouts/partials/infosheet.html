@@ -31,18 +31,14 @@
                 </td>
                 <td class="infosheet-cell infosheet-content">
                     <table class="cast-table">
-                        {{ $i := 0 }}
-                        {{ range . }}
-                            {{ $rest := mod $i 2 }}
-                            {{ if eq $rest 0 }}
+                        {{ range $i, $data := . }}
+                            {{ if eq (mod $i 2) 0 }}
                                 <tr class="cast-row">
-                                    <td class="cast-label cast-cell">{{ . }}:</td>
-                            {{ end }}
-                            {{ if eq $rest 1 }}
-                                    <td class="cast-content cast-cell">{{ . }}</td>
+                                    <td class="cast-label cast-cell">{{ $data }}:</td>
+                            {{ else }}
+                                    <td class="cast-content cast-cell">{{ $data }}</td>
                                 </tr>
                             {{ end }}
-                            {{ $i = add $i 1 }}
                         {{ end }}
                     </table>
                 </td>
