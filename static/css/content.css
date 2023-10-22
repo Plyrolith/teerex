@@ -64,6 +64,7 @@ a:hover {
 
 #page-content {
   padding-top: 1px;
+  padding-bottom: 1rem;
 }
 
 #page-content > :not(.full-width) {
