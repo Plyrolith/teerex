@@ -12,14 +12,11 @@
 
 .shortcode-cell {
     padding: 1rem;
+    vertical-align: top;
     border: 0.1rem solid;
     border-color: #111;
     background-color: #222;
 }
-
-/* .shortcode-row .shortcode-cell:first-child {
-    text-align: right;
-} */
 
 .shortcode-header {
     font-weight: bold;
