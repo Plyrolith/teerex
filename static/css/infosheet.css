@@ -1,0 +1,36 @@
+.infosheet-container {
+    font-size: 0.8rem;
+    table-layout: fixed;
+}
+
+.infosheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+
+.infosheet-cell {
+    padding: 1rem;
+    border: 0.1rem solid;
+    border-color: #111;
+}
+
+.infosheet-label {   
+    background-color: #222;
+}
+
+.infosheet-iconcell {
+    width: 0;
+    background-color: #333;
+}
+
+.infosheet-content {
+    background-color: #222;
+}
+
+.infosheet-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    filter: invert(100%);
+}
