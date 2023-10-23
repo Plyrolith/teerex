@@ -15,6 +15,7 @@
 
 #hero-image-page {
     object-fit: cover;
+    margin-top: 4rem;
     width: 100vw;
     height: 16rem;
 }
