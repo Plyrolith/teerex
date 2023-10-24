@@ -16,6 +16,18 @@ Use these parameters to customize the theme.
 
   If the site banner displayed on the main page should be different from the title, it can be set with this parameter.
 
+- `description`
+
+  If set, this text will appear under the main page banner.
+
+- `logo`
+
+  Relative path to the logo drawn in the navigation bar.
+
+- `herovideo`
+
+  Relative path to the file for the main page full screen background video loop.
+
 - `copyright`
 
   Default site parameter; will be displayed on the footer.
@@ -26,6 +38,7 @@ Additional parameters that can be set per page.
 
   Image displayed in post lists or grids.
   Set the path absolute or relative to current page.
+
 - `herocover`
 
   Image displayed at the top of the page.
