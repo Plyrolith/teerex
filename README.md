@@ -33,7 +33,7 @@ Parameters:
 - file, absolute or relative to current page
 
 ```
-{{< audio "files/audio.mp3" >}}
+{{< audio "audio/audio.mp3" >}}
 ```
 
 ### `button` / `button-blank` / `button-lightbox`
@@ -59,9 +59,9 @@ Parameters:
 
 ```
 {{< gallery 3 >}}
-{{< image "images/image1.jpg" >}}
-{{< image "images/image2.jpg" >}}
-{{< image "images/image3.jpg" >}}
+{{< image "img/image1.jpg" >}}
+{{< image "img/image2.jpg" >}}
+{{< image "img/image3.jpg" >}}
 {{< /gallery >}}
 ```
 
@@ -80,7 +80,7 @@ Parameters:
 - href, absolute or relative to current page
 
 ```
-{{< image "images/still.jpg" >}}
+{{< image "img/still.jpg" >}}
 ```
 
 ### `video`
@@ -89,14 +89,14 @@ Parameters:
 - href, absolute or relative to current page
 
 ```
-{{< video "files/myvideo.mp4" >}}
+{{< video "video/myvideo.mp4" >}}
 ```
 
 ### `video-loop`
 Same as `video`, but using *autoplay*, *muted* and without *controls*. Resembles the legacy use of GIFs.
 
 ```
-{{< video-loop "files/myloop.mp4" >}}
+{{< video-loop "video/myloop.mp4" >}}
 ```
 
 ### `youtube`
