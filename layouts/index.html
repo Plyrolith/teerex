@@ -10,13 +10,7 @@
     {{ end }}
   </div>
   <div id="hero-header-home">
-    {{ $banner := "" }}
-    {{ if .Site.Params.Banner }}
-      {{ $banner = .Site.Params.Banner }}
-    {{ else }}
-      {{ $banner = .Site.Title }}
-    {{ end }}
-    <h1 id="hero-title-home">{{ $banner }}</h1>
+    <h1 id="hero-title-home">{{ .Site.Title }}</h1>
     {{ if .Site.Params.Description }}
     <p id="hero-description">{{ .Site.Params.Description }}</p>
     {{ end }}

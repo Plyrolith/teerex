@@ -4,7 +4,12 @@
     <link rel="manifest" href="site.webmanifest">
     {{ partial "favicon.html" . }}
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    {{ $title := print .Site.Title " | " .Title }}
-    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    {{ $title := print  .Title " - " .Site.Title }}
+    {{ if .IsHome }}
+    {{ $title = .Site.Title}}
+    {{ if .Site.Params.Description }}
+    {{ $title = print .Site.Title " - " .Site.Params.Description }}
+    {{ end }}
+    {{ end }}
     <title>{{ $title }}</title>
 </head>

@@ -12,13 +12,9 @@ theme = ["teerex"]
 ## Config Parameters
 Use these parameters in your website's `config.toml` to customize the theme.
 
-- `banner`
-
-  If the site banner displayed on the main page should be different from the title, it can be set with this parameter.
-
 - `description`
 
-  If set, this text will appear under the main page banner.
+  If set, this text will appear under the main page banner and be appended to the page title for the main page.
 
 - `logo`
 
