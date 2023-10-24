@@ -26,6 +26,16 @@ Additional parameters that can be set per page.
   Image displayed at the top of the page.
   Set the path absolute or relative to current page.
 
+## Favicon
+Favicons can be placed in `static/ico`. For optimal results, the following files should be available:
+- `android-chrome-192x192.png`
+- `android-chrome-512x512.png`
+- `apple-touch-icon.png`
+- `favicon.ico`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `site.webmanifest`
+
 ## Shortcodes
 ### `audio`
 Use the HTML5 audio player to open given file.
