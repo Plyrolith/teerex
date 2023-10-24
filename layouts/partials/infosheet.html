@@ -1,48 +1,48 @@
 <div class="infosheet-container">
     <table class="infosheet-table">
         {{ with .Params.target }}
-            {{ partial "inforow.html" (dict "label" " " "icon" "bullseye" "content" .) }}
+        {{ partial "inforow.html" (dict "label" " " "icon" "bullseye" "content" .) }}
         {{ end }}
         {{ with .Params.contractor }}
-            {{ partial "inforow.html" (dict "label" "Contractor" "icon" "star" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Contractor" "icon" "star" "content" .) }}
         {{ end }}
         {{ with .Params.format }}
-            {{ partial "inforow.html" (dict "label" "Format" "icon" "movie" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Format" "icon" "movie" "content" .) }}
         {{ end }}
         {{ with .Params.credits }}
-            <tr class="infosheet-row">
-                <td class="infosheet-cell infosheet-label">
-                    Credits
-                </td>
-                <td class="infosheet-cell infosheet-iconcell">
-                    <img src="/icons/account-group.svg" class="infosheet-icon" />
-                </td>
-                <td class="infosheet-cell infosheet-content">
-                    <table class="cast-table">
-                        {{ range $i, $data := . }}
-                            {{ if eq (mod $i 2) 0 }}
-                                <tr class="cast-row">
-                                    <td class="cast-label cast-cell">{{ $data }}:</td>
-                            {{ else }}
-                                    <td class="cast-content cast-cell">{{ $data }}</td>
-                                </tr>
-                            {{ end }}
-                        {{ end }}
-                    </table>
-                </td>
-            </tr>
+        <tr class="infosheet-row">
+            <td class="infosheet-cell infosheet-label">
+                Credits
+            </td>
+            <td class="infosheet-cell infosheet-iconcell">
+                <img src="/icons/account-group.svg" class="infosheet-icon" />
+            </td>
+            <td class="infosheet-cell infosheet-content">
+                <table class="cast-table">
+                    {{ range $i, $data := . }}
+                    {{ if eq (mod $i 2) 0 }}
+                    <tr class="cast-row">
+                        <td class="cast-label cast-cell">{{ $data }}:</td>
+                    {{ else }}
+                        <td class="cast-content cast-cell">{{ $data }}</td>
+                    </tr>
+                    {{ end }}
+                    {{ end }}
+                </table>
+            </td>
+        </tr>
         {{ end }}
         {{ with .Params.release }}
-            {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
         {{ end }}
         {{ with .Params.awards }}
-            {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
         {{ end }}
         {{ with .Params.disciplines }}
-            {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
         {{ end }}
         {{ with .Params.software }}
-            {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
         {{ end }}
     </table>
 </div>
