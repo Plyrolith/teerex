@@ -10,7 +10,7 @@ theme = ["teerex"]
 ```
 
 ## Config Parameters
-Use these parameters to customize the theme.
+Use these parameters in your website's `config.toml` to customize the theme.
 
 - `banner`
 
