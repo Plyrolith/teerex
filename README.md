@@ -11,6 +11,11 @@ theme = ["teerex"]
 
 ## Config Parameters
 Use these parameters to customize the theme.
+
+- `banner`
+
+  If the site banner displayed on the main page should be different from the title, it can be set with this parameter.
+
 - `copyright`
 
   Default site parameter; will be displayed on the footer.
