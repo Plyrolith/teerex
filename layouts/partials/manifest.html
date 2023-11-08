@@ -1,1 +1,5 @@
+{{ if (fileExists "static/webmanifest.json") }}
 <link rel="manifest" href="/manifest.json">
+{{ else if (fileExists "static/ico.site.webmanifest") }}
+<link rel="manifest" href="/ico/site.webmanifest">
+{{ end }}
