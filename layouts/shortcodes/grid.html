@@ -4,8 +4,14 @@
 <div class="grid full-width">
 {{ end }}
   {{ range .Site.Pages.RelatedTo (keyVals "tags" (.Get 0)) }}
+  {{ $cover := path.Join .RelPermalink .Page.Params.Cover }}
+  {{ $placeholder := "/img/loading-content.png"}}
+  {{ $lowres := add $cover "-lowres.jpg" }}
+  {{ if fileExists $lowres }}
+  {{ $placeholder = $lowres }}
+  {{ end }}
   <a href="{{ .RelPermalink | safeHTML -}}">
-    <div class="grid-post" style="--background-image: url({{ path.Join .RelPermalink .Page.Params.Cover | safeHTML -}});">
+    <div class="grid-post lazy" data-bg="{{ $cover | safeHTML -}}" style='background-image: url("{{ $placeholder }}");'>
       <div class="grid-text">
         <h2 class="grid-title">{{ .Title }}</h2>
         <p>{{ .Summary | plainify | htmlUnescape }}</p>

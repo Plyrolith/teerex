@@ -1,8 +1,13 @@
 {{ define "hero" }}
 {{ if (isset .Params "heroimage") }}
+{{ $placeholder := "/img/loading-content.png"}}
+{{ $lowres := add (path.Join .RelPermalink .Page.Params.Heroimage) "-lowres.jpg" }}
+{{ if fileExists $lowres }}
+{{ $placeholder = $lowres }}
+{{ end }}
 <div id="hero">
   <div id="hero-media">
-    <img src="{{ .Params.Heroimage }}" id="hero-image-page" />
+    <img data-src="{{ .Params.Heroimage }}" src="{{ $placeholder | safeHTML -}}" id="hero-image-page" class="lazy" />
   </div>
   <div id="hero-header-spacer"></div>
   <div id="hero-header-page">

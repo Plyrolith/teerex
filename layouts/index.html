@@ -1,12 +1,19 @@
 {{ define "hero" }}
+{{ $placeholder := "/img/loading-content.png"}}
 <div id="hero">
   <div id="hero-media">
     {{ if .Site.Params.Herovideo }}
-    <video playsinline autoplay muted loop id="hero-video-home">
-      <source src="{{ .Site.Params.Herovideo }}" type="video/mp4">
+    {{ if fileExists (add (path.Join "static" .Site.Params.Herovideo) "-lowres.jpg") }}
+    {{ $placeholder = add .Site.Params.Herovideo "-lowres.jpg" }}
+    {{ end }}
+    <video playsinline autoplay muted loop id="hero-video-home" poster="{{ $placeholder | safeHTML -}}" class="lazy">
+      <source data-src="{{ .Site.Params.Herovideo }}" type="video/mp4">
     </video>
     {{ else if .Site.Params.Heroimage }}
-    <img src="{{ .Site.Params.Heroimage }}" id="hero-image-home" />
+    {{ if fileExists (add (path.Join "static" .Site.Params.Herovideo) "-lowres.jpg") }}
+    {{ $placeholder = add .Site.Params.Herovideo "-lowres.jpg" }}
+    {{ end }}
+    <img data-src="{{ .Site.Params.Heroimage }}" src="{{ $placeholder | safeHTML -}}" id="hero-image-home" class="lazy" />
     {{ end }}
   </div>
   <div id="hero-header-home">

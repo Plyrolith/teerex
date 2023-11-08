@@ -1,7 +1,12 @@
+{{ $placeholder := "/img/loading-content.png"}}
+{{ $lowres := path.Join (path.Dir .Page.File.Path) (add (.Get 0) "-lowres.jpg") }}
+{{ if fileExists $lowres }}
+{{ $placeholder = add (.Get 0) "-lowres.jpg" }}
+{{ end }}
 <div class="video-container media-container">
   <a href="{{ (.Get 0) | safeHTML -}}" data-fslightbox="gallery" data-gallery="{{ .Page.File.UniqueID }}">
-    <video playsinline autoplay muted loop class="video-player media">
-      <source src="{{ (.Get 0) | safeHTML -}}" type="video/mp4">
+    <video playsinline autoplay muted loop class="video-player media lazy" poster="{{ $placeholder  | safeHTML -}}">
+      <source data-src="{{ (.Get 0) | safeHTML -}}" type="video/mp4">
     </video>
   </a>
 </div>
