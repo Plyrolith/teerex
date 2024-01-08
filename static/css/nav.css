@@ -13,37 +13,114 @@
 }
 
 #nav-bar {
-    margin: 1rem;
+    margin: 1rem 0;
     filter: drop-shadow(0 0 0.1rem black);
 }
 
 #nav-logo {
+    margin-left: 1rem;
     float: left;
 }
+
 #nav-logo a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
 }
+
 #nav-logo img {
     max-height: 2rem;
 }
 
 #nav-menu {
-    margin: 0;
-    padding: 0;
+    margin-right: 1rem;
     text-align: right;
     font-weight: 500;
 }
 
-#nav-menu a {
+#nav-list a {
     text-decoration: none;
 }
 
-#nav-menu li + li {
+#nav-list {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li+li {
     margin-left: 1rem;
 }
 
-#nav-menu .menu-item {
+#nav-list .nav-item {
     display: inline-block;
+    list-style-type: none;
+}
+
+#nav-button {
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-button-bar {
+    width: 2rem;
+    height: 0.4rem;
+    margin-bottom: 0.4rem;
+    background-color: white;
+    transition: 240ms;
+}
+
+#nav-button:hover .nav-button-bar {
+    background-color: #ddd;
+}
+
+/* Rotate first bar */
+.activated .nav-button-bar-1 {
+    transform: translate(0, 0.8rem) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.activated .nav-button-bar-2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.activated .nav-button-bar-3 {
+    transform: translate(0, -0.8rem) rotate(45deg);
+}
+
+@media screen and (max-width: 24rem) {
+    #nav-button {
+        display: block;
+    }
+
+    #nav-list .nav-item {
+        display: block;
+    }
+
+    #nav-list a {
+        display: block;
+        padding: 1rem;
+    }
+
+    #nav-list li+li {
+        border-top: 0.1rem solid #222;
+        margin-left: 0;
+    }
+
+    #nav-menu {
+        display: none;
+        margin-right: 0;
+        top: 3rem;
+        right: 0;
+        background-color: #333;
+        position: absolute;
+        box-shadow: none;
+    }
+
+    #nav-menu.activated {
+        display: flex;
+        flex-direction: column;
+    }
 }
