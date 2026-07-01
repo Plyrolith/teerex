@@ -1,20 +1,29 @@
 # Teerex - A Hugo Theme for Media Portfolios
+
 ## Installation
+
 Clone the theme into your project.
+
 ```bash
 git clone https://github.com/plyrolith/teerex themes/teerex
 ```
+
 Setup your site configuration to use the theme:
+
 ```toml
 theme = ["teerex"]
 ```
 
 ## Resources
+
 ### Web Application Manifest
+
 The [Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) json has to be placed as `static/manifest.json`.
 
 ### Favicon
+
 [Favicons](https://favicon.io/) can be placed in `static/ico`. For optimal results, the following files should be available:
+
 - `android-chrome-192x192.png`
 - `android-chrome-512x512.png`
 - `apple-touch-icon.png`
@@ -23,6 +32,7 @@ The [Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Mani
 - `favicon-32x32.png`
 
 ## Config Parameters
+
 Use these parameters in your website's `config.toml` to customize the theme.
 
 - `description`
@@ -42,7 +52,9 @@ Use these parameters in your website's `config.toml` to customize the theme.
   Default site parameter; will be displayed on the footer.
 
 ## Post Parameters
+
 Additional parameters that can be set per page.
+
 - `cover`
 
   Image displayed in post lists or grids.
@@ -54,9 +66,12 @@ Additional parameters that can be set per page.
   Set the path absolute or relative to current page.
 
 ## Shortcodes
+
 ### `audio`
+
 Use the HTML5 audio player to open given file.
 Parameters:
+
 - file, absolute or relative to current page
 
 ```
@@ -64,9 +79,11 @@ Parameters:
 ```
 
 ### `button` / `button-blank` / `button-lightbox`
+
 Display given link as a button.
 Use variations to open it in a new tab or in *fslightbox*.
 Parameters:
+
 - href, absolute or relative to current page
 - text (optional)
 - icon name (optional)
@@ -80,8 +97,10 @@ Parameters:
 ```
 
 ### `gallery`
+
 Create a gallery from images given with `image` shortcodes.
 Parameters:
+
 - columns (optional, keep empty to use full width and responsive column count)
 
 ```
@@ -93,8 +112,10 @@ Parameters:
 ```
 
 ### `grid`
+
 Display filtered posts in a cover image grid using the full page width.
 Parameters:
+
 - tags for filtering posts
 
 ```
@@ -102,8 +123,10 @@ Parameters:
 ```
 
 ### `image`
+
 Display a single image and make it available for *fslightbox*.
 Parameters:
+
 - href, absolute or relative to current page
 
 ```
@@ -111,8 +134,10 @@ Parameters:
 ```
 
 ### `video`
+
 Open given file in an HTML5 video player with controls.
 Parameters:
+
 - href, absolute or relative to current page
 
 ```
@@ -120,6 +145,7 @@ Parameters:
 ```
 
 ### `video-loop`
+
 Same as `video`, but using *autoplay*, *muted* and without *controls*. Resembles the legacy use of GIFs.
 
 ```
@@ -127,11 +153,14 @@ Same as `video`, but using *autoplay*, *muted* and without *controls*. Resembles
 ```
 
 ### `youtube`
+
 Replacement of the built-in shortcode to fit the theme better; same funtionality.
 Parameters:
+
 - video ID
 
 ### `table` | `th` | `tr`
+
 Easy table creation with automated styling. Nested `th` shortcode will be displayed as header, nested `tr` shortcodes will be displayed as rows.
 
 ```
@@ -141,3 +170,7 @@ Easy table creation with automated styling. Nested `th` shortcode will be displa
 {{< tr Pear "2$" 2 >}}
 {{< /table >}}
 ```
+
+## Lazy Loading
+
+If there is a JPEG file with the suffix `-lowres.jpg` next to any of your media files, it will be displayed first and switched out once the actual media file is loaded. Make sure the resolution still matches to prevent jumping. This makes it easy to create deflated placeholders for large images and videos.
