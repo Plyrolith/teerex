@@ -4,7 +4,7 @@
             <a class="nav-link" href="/">
                 {{ if .Site.Params.Logo }}
                 <img src="{{ .Site.Params.Logo }}" alt="{{ .Site.Title }}" />
-                {{ else }}
+            {{ else }}
                 {{ .Site.Title }}
                 {{ end }}
             </a>
@@ -19,8 +19,8 @@
                 {{ range .Site.Menus.main }}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ .URL }}">
-                    {{ $text := print .Name | safeHTML }}
-                    {{ $text }}
+                        {{ $text := print .Name | safeHTML }}
+                        {{ $text }}
                     </a>
                 </li>
                 {{ end }}

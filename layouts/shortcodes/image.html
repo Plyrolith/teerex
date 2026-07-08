@@ -4,7 +4,11 @@
 {{ $placeholder = add (.Get 0) "-lowres.jpg" }}
 {{ end }}
 <div class="image-container media-container">
-  <a href="{{ (.Get 0) | safeHTML -}}" data-fslightbox="gallery" data-gallery="{{ .Page.File.UniqueID }}">
-    <img data-src="{{ (.Get 0) | safeHTML -}}" src="{{ $placeholder | safeHTML -}}" class="image-media media lazy" />
+  <a href="{{ (.Get 0) | safeHTML -}}"
+     data-fslightbox="gallery"
+     data-gallery="{{ .Page.File.UniqueID }}">
+    <img data-src="{{ (.Get 0) | safeHTML -}}"
+         src="{{ $placeholder | safeHTML -}}"
+         class="image-media media lazy" />
   </a>
 </div>

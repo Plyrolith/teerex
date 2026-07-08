@@ -7,7 +7,10 @@
 {{ end }}
 <div id="hero">
   <div id="hero-media">
-    <img data-src="{{ .Params.Heroimage }}" src="{{ $placeholder | safeHTML -}}" id="hero-image-page" class="lazy" />
+    <img data-src="{{ .Params.Heroimage }}"
+         src="{{ $placeholder | safeHTML -}}"
+         id="hero-image-page"
+         class="lazy" />
   </div>
   <div id="hero-header-spacer"></div>
   <div id="hero-header-page">
@@ -22,8 +25,8 @@
 <div class="nav-spacer"></div>
 <h1 class="title">{{ .Title }}</h1>
 {{ end }}
-{{ if (isset .Params "infosheet")}}
+{{ if (isset .Params "infosheet") }}
 {{ partial "infosheet.html" . }}
-{{ end}}
+{{ end }}
 {{ .Content }}
 {{ end }}

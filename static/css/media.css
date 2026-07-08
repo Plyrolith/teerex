@@ -1,19 +1,19 @@
 .gallery .media-container {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .media {
-    width: 100%;
+  width: 100%;
 }
 
 .image-media {
-    display: block;
+  display: block;
 }
 
 .youtube-player {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }

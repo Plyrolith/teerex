@@ -81,16 +81,16 @@ Parameters:
 ### `button` / `button-blank` / `button-lightbox`
 
 Display given link as a button.
-Use variations to open it in a new tab or in *fslightbox*.
+Use variations to open it in a new tab or in _fslightbox_.
 Parameters:
 
 - href, absolute or relative to current page
 - text (optional)
 - icon name (optional)
-    - play
-    - download
-    - file
-    - pdf
+  - play
+  - download
+  - file
+  - pdf
 
 ```
 {{< button "files/iframe.html" "Click this button!" "play" >}}
@@ -124,7 +124,7 @@ Parameters:
 
 ### `image`
 
-Display a single image and make it available for *fslightbox*.
+Display a single image and make it available for _fslightbox_.
 Parameters:
 
 - href, absolute or relative to current page
@@ -146,7 +146,7 @@ Parameters:
 
 ### `video-loop`
 
-Same as `video`, but using *autoplay*, *muted* and without *controls*. Resembles the legacy use of GIFs.
+Same as `video`, but using _autoplay_, _muted_ and without _controls_. Resembles the legacy use of GIFs.
 
 ```
 {{< video-loop "video/myloop.mp4" >}}

@@ -5,9 +5,7 @@
         {{- block "hero" . }}{{- end }}
         {{- partial "header.html" . -}}
         <div id="content">
-            <div id="page-content">
-            {{- block "main" . }}{{- end }}
-            </div>
+            <div id="page-content">{{- block "main" . }}{{- end }}</div>
         </div>
         {{- partial "footer.html" . -}}
         {{- partial "nav.html" . -}}

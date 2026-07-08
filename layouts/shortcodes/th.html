@@ -3,14 +3,14 @@
     {{ range $i, $data := .Params }}
     {{ if eq $nb_cells 2 }}
     {{ if eq $i 0 }}
-        <th class="shortcode-header shortcode-cell" style="text-align: right;">
+    <th class="shortcode-header shortcode-cell" style="text-align: right;">
     {{ else }}
         <th class="shortcode-header shortcode-cell" style="text-align: left;">
-    {{ end }}
-    {{ else }}
-        <th class="shortcode-header shortcode-cell">
-    {{ end }}
-    {{ $data | markdownify | safeHTML }}
-    </th>
-    {{ end }}
-</tr>
+            {{ end }}
+        {{ else }}
+            <th class="shortcode-header shortcode-cell">
+                {{ end }}
+                {{ $data | markdownify | safeHTML }}
+            </th>
+            {{ end }}
+        </tr>

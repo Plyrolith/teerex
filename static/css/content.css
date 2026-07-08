@@ -15,7 +15,12 @@ body {
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "League Spartan", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -40,7 +45,8 @@ blockquote {
   background-color: #222;
 }
 
-blockquote p, blockquote li {
+blockquote p,
+blockquote li {
   margin: 0;
   padding: 0.5rem 0;
   font-family: "EB Garamond", Times, serif;
@@ -100,15 +106,16 @@ a:hover {
 }
 
 @media screen and (max-width: 50rem) {
-  #page-content > :not(
-    .full-width,
-    .gallery,
-    .grid,
-    .highlight,
-    .infosheet-container,
-    .media-container,
-    .table-container
-  ){
+  #page-content
+    > :not(
+      .full-width,
+      .gallery,
+      .grid,
+      .highlight,
+      .infosheet-container,
+      .media-container,
+      .table-container
+    ) {
     margin-left: 1rem;
     margin-right: 1rem;
   }
