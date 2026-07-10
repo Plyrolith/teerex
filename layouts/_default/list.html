@@ -6,13 +6,13 @@
     <h1 class="post-title">{{ .Title }}</h1>
   </a>
   {{ if isset .Page.Params "cover" }}
-  <a href="{{ .RelPermalink | safeHTML -}}">
+  {{ with .Page.Resources.GetMatch .Page.Params.Cover }}
+  <a href="{{ $.RelPermalink | safeHTML -}}">
     <div class="post-image-container">
-      <img src="{{ path.Join .RelPermalink .Page.Params.Cover | safeHTML -}}"
-           class="post-image"
-           alt="">
+      <img src="{{ .RelPermalink | safeHTML -}}" class="post-image" alt="">
     </div>
   </a>
+  {{ end }}
   {{ end }}
   <a href="{{ .RelPermalink | safeHTML -}}">
     <p>{{ .Summary | plainify | htmlUnescape }}</p>
