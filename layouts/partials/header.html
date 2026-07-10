@@ -24,6 +24,9 @@
                     </a>
                 </li>
                 {{ end }}
+                {{ if gt (len .Site.Languages) 1 }}
+                <li class="nav-item">{{ partial "language.html" . }}</li>
+                {{ end }}
             </ul>
         </div>
     </div>

@@ -1,0 +1,8 @@
+.language-switcher {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.language-switcher:hover {
+  opacity: 1;
+}
