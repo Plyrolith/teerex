@@ -1,7 +1,7 @@
-{{ if gt (len .Site.Languages) 1 }}
+{{ if hugo.IsMultilingual }}
 {{ range .Translations }}
 <a href="{{ .RelPermalink }}"
    class="language-switcher"
-   title="{{ .Language.LanguageName }}">{{ .Language.Params.flag }}</a>
+   title="{{ .Language.Label }}">{{ .Language.Params.flag }}</a>
 {{ end }}
 {{ end }}

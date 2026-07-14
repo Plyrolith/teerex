@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 {{ end }}
-                {{ if gt (len .Site.Languages) 1 }}
+                {{ if hugo.IsMultilingual }}
                 <li class="nav-item">{{ partial "language.html" . }}</li>
                 {{ end }}
             </ul>
