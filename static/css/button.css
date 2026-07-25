@@ -11,6 +11,7 @@
   color: white;
   background-color: #222;
   transition: background-color 240ms;
+  cursor: pointer;
 }
 
 .button:hover {
