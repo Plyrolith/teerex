@@ -7,13 +7,13 @@
         {{ partial "inforow.html" (dict "label" "Contractor" "icon" "star" "content" .) }}
         {{ end }}
         {{ with .Params.format }}
-        {{ partial "inforow.html" (dict "label" "Format" "icon" "movie" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Format" "icon" "clapperboard" "content" .) }}
         {{ end }}
         {{ with .Params.credits }}
         <tr class="infosheet-row">
             <td class="infosheet-cell infosheet-label">Credits</td>
             <td class="infosheet-cell infosheet-iconcell">
-                <img src="/icons/account-group.svg" class="infosheet-icon" />
+                <img src="/icons/users.svg" class="infosheet-icon" />
             </td>
             <td class="infosheet-cell infosheet-content">
                 <table class="cast-table">
@@ -31,7 +31,7 @@
         </tr>
         {{ end }}
         {{ with .Params.release }}
-        {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar-badge" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar" "content" .) }}
         {{ end }}
         {{ with .Params.awards }}
         {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
@@ -40,7 +40,7 @@
         {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
         {{ end }}
         {{ with .Params.software }}
-        {{ partial "inforow.html" (dict "label" "Software" "icon" "tools" "content" .) }}
+        {{ partial "inforow.html" (dict "label" "Software" "icon" "screwdriver-wrench" "content" .) }}
         {{ end }}
     </table>
 </div>
