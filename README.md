@@ -65,6 +65,29 @@ Additional parameters that can be set per page.
   Image displayed at the top of the page.
   Set the path absolute or relative to current page.
 
+- `infosheet`
+
+  Pre-formated table for project information.
+  Possible entries with examples:
+
+  ```
+  title: Jurassic Park
+  infosheet:
+    contractor: Industrial Light & Magic
+    format: Feature Film, 127 Minutes
+    credits:
+      - label: Director
+        value: Stephen Spielberg
+      - label: Screenplay
+        value: Michael Crichton, David Koepp
+      - label: Produced by
+        value: Kathleen Kennedy, Gerald R. Molen
+    release: 1993-06-09
+    awards: Academy Awards 1994: Best Sound Effects Editing, Best Sound, Best Visual Effects
+    disciplines: Animation
+    software: Sock
+  ```
+
 ## Shortcodes
 
 ### `audio`

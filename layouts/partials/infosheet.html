@@ -1,45 +1,43 @@
 <div class="infosheet-container">
     <table class="infosheet-table">
-        {{ with .Params.target }}
+        {{ $sheet := .Params.infosheet }}
+        {{ with $sheet.target }}
         {{ partial "inforow.html" (dict "label" " " "icon" "bullseye" "content" .) }}
         {{ end }}
-        {{ with .Params.contractor }}
+        {{ with $sheet.contractor }}
         {{ partial "inforow.html" (dict "label" "Contractor" "icon" "star" "content" .) }}
         {{ end }}
-        {{ with .Params.format }}
+        {{ with $sheet.format }}
         {{ partial "inforow.html" (dict "label" "Format" "icon" "clapperboard" "content" .) }}
         {{ end }}
-        {{ with .Params.credits }}
+        {{ with $sheet.credits }}
         <tr class="infosheet-row">
             <td class="infosheet-cell infosheet-label">Credits</td>
             <td class="infosheet-cell infosheet-iconcell">
-                <img src="/icons/users.svg" class="infosheet-icon" />
+                <img src="/icons/users.svg" class="infosheet-icon" alt="Credits" />
             </td>
             <td class="infosheet-cell infosheet-content">
                 <table class="cast-table">
-                    {{ range $i, $data := . }}
-                    {{ if eq (mod $i 2) 0 }}
+                    {{ range . }}
                     <tr class="cast-row">
-                        <td class="cast-label cast-cell">{{ $data }}:</td>
-                    {{ else }}
-                        <td class="cast-content cast-cell">{{ $data }}</td>
+                        <td class="cast-label cast-cell">{{ .label }}:</td>
+                        <td class="cast-content cast-cell">{{ .value }}</td>
                     </tr>
-                    {{ end }}
                     {{ end }}
                 </table>
             </td>
         </tr>
         {{ end }}
-        {{ with .Params.release }}
+        {{ with $sheet.release }}
         {{ partial "inforow.html" (dict "label" "Release" "icon" "calendar" "content" .) }}
         {{ end }}
-        {{ with .Params.awards }}
+        {{ with $sheet.awards }}
         {{ partial "inforow.html" (dict "label" "Awards" "icon" "medal" "content" .) }}
         {{ end }}
-        {{ with .Params.disciplines }}
+        {{ with $sheet.disciplines }}
         {{ partial "inforow.html" (dict "label" "Disciplines" "icon" "palette" "content" .) }}
         {{ end }}
-        {{ with .Params.software }}
+        {{ with $sheet.software }}
         {{ partial "inforow.html" (dict "label" "Software" "icon" "screwdriver-wrench" "content" .) }}
         {{ end }}
     </table>
