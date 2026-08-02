@@ -21,7 +21,7 @@
                     {{ range . }}
                     <tr class="cast-row">
                         <td class="cast-label cast-cell">{{ .label }}:</td>
-                        <td class="cast-content cast-cell">{{ .value }}</td>
+                        <td class="cast-content cast-cell">{{ .value  | markdownify}}</td>
                     </tr>
                     {{ end }}
                 </table>
