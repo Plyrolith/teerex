@@ -1,21 +1,13 @@
 {{ define "hero" }}
 {{ if (isset .Params "heroimage") }}
-{{ $placeholder := "/img/loading-content.png" }}
 {{ $heroName := .Page.Params.Heroimage }}
 {{ $heroSrc := $heroName }}
 {{ with .Page.Resources.GetMatch $heroName }}
 {{ $heroSrc = .RelPermalink }}
-{{ $lowresName := printf "%s-lowres.jpg" $heroName }}
-{{ with $.Page.Resources.GetMatch $lowresName }}
-{{ $placeholder = .RelPermalink }}
-{{ end }}
 {{ end }}
 <div id="hero">
   <div id="hero-media">
-    <img data-src="{{ $heroSrc | safeHTML -}}"
-         src="{{ $placeholder | safeHTML -}}"
-         id="hero-image-page"
-         class="lazy" />
+    <img src="{{ $heroSrc | safeHTML -}}" id="hero-image-page" alt="hero" />
   </div>
   <div id="hero-header-spacer"></div>
   <div id="hero-header-page">
