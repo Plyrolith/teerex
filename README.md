@@ -156,6 +156,19 @@ Parameters:
 {{< image "img/still.jpg" >}}
 ```
 
+### `image-link`
+
+Add a custom image that serves as an anchor/link to defined target.
+Parameters:
+
+- image href, absolute or relative to current page
+- target href, absolute or relative to current page
+- width (optional)
+
+```
+{{< image-link "img/example_logo.jpg" "https://example.com" "320" >}}
+```
+
 ### `video`
 
 Open given file in an HTML5 video player with controls.

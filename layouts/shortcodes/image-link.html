@@ -1,0 +1,26 @@
+{{ $path := .Get 0 }}
+{{ $placeholder := "/img/loading-content.png" }}
+{{ $src := $path }}
+{{ with .Page.Resources.GetMatch $path }}
+{{ $src = .RelPermalink }}
+{{ $lowresName := printf "%s-lowres.jpg" $path }}
+{{ with $.Page.Resources.GetMatch $lowresName }}
+{{ $placeholder = .RelPermalink }}
+{{ end }}
+{{ end }}
+{{ $href := .Get 1 }}
+{{ $dst := $href }}
+{{ with .Page.Resources.GetMatch $href }}
+{{ $dst = .RelPermalink }}
+{{ end }}
+<div class="image-link">
+  <a href="{{ $dst | safeHTML -}}" target="_blank">
+    <img data-src="{{ $src | safeHTML -}}"
+         src="{{ $placeholder | safeHTML -}}"
+         class="lazy"
+         alt="link"
+         {{ with (.Get 2) }}
+         width="{{ . }}"
+         {{ end }} />
+  </a>
+</div>
