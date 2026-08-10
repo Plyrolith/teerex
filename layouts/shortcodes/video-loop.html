@@ -11,14 +11,16 @@
 <div class="video-container media-container">
   <a href="{{ $src | safeHTML -}}"
      data-fslightbox="gallery"
-     data-gallery="{{ .Page.File.UniqueID }}">
+     data-gallery="{{ .Page.File.UniqueID }}"
+     data-autoplay
+     data-loop>
     <video playsinline
            autoplay
            muted
            loop
-           class="video-player media lazy"
-           poster="{{ $placeholder  | safeHTML -}}">
-      <source data-src="{{ $src | safeHTML -}}" type="video/mp4">
+           class="video-player media"
+           src="{{ $src }}"
+           poster="{{ $placeholder }}">
     </video>
   </a>
 </div>
