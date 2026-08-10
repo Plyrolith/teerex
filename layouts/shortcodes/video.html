@@ -1,18 +1,30 @@
 {{ $path := .Get 0 }}
-{{ $placeholder := "/img/loading-content.png" }}
+{{ $posterParam := .Get 1 }}
 {{ $src := $path }}
 {{ with .Page.Resources.GetMatch $path }}
 {{ $src = .RelPermalink }}
-{{ $lowresName := printf "%s-lowres.jpg" $path }}
+{{ end }}
+{{ $poster := "/img/play-content.png" }}
+{{ $placeholder := "" }}
+{{ if $posterParam }}
+{{ with $.Page.Resources.GetMatch $posterParam }}
+{{ $poster = .RelPermalink }}
+{{ $lowresName := printf "%s-lowres.jpg" $posterParam }}
 {{ with $.Page.Resources.GetMatch $lowresName }}
 {{ $placeholder = .RelPermalink }}
 {{ end }}
 {{ end }}
+{{ end }}
 <div class="video-container media-container">
-  <video controls
-         loop
-         class="video-player media lazy"
-         poster="{{ $placeholder  | safeHTML -}}">
-    <source data-src="{{ $src | safeHTML -}}" type="video/mp4">
+<video controls
+       loop
+       class="video-player media lazy"
+       data-src="{{ $src }}"
+       {{ if $placeholder }}
+       poster="{{ $placeholder }}"
+       data-poster="{{ $poster }}"
+       {{ else }}
+       poster="{{ $poster }}"
+       {{ end }}>
   </video>
 </div>

@@ -174,10 +174,11 @@ Parameters:
 Open given file in an HTML5 video player with controls.
 Parameters:
 
-- href, absolute or relative to current page
+- video href, absolute or relative to current page
+- thumbnail href (optional), absolute or relative to current page
 
 ```
-{{< video "video/myvideo.mp4" >}}
+{{< video "video/myvideo.mp4" "img/thumb.jpg" >}}
 ```
 
 ### `video-loop`
