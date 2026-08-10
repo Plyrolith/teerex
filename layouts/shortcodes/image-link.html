@@ -13,11 +13,11 @@
 {{ with .Page.Resources.GetMatch $href }}
 {{ $dst = .RelPermalink }}
 {{ end }}
-<div class="image-link">
+<div class="image-link-container">
   <a href="{{ $dst | safeHTML -}}" target="_blank">
     <img data-src="{{ $src | safeHTML -}}"
          src="{{ $placeholder | safeHTML -}}"
-         class="lazy"
+         class="lazy image-link"
          alt="link"
          {{ with (.Get 2) }}
          width="{{ . }}"

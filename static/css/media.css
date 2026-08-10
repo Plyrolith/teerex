@@ -11,6 +11,10 @@
   display: block;
 }
 
+.image-link {
+  max-width: 100%;
+}
+
 .youtube-player {
   position: relative;
   padding-bottom: 56.25%;
