@@ -101,6 +101,19 @@ Parameters:
 {{< audio "audio/audio.mp3" >}}
 ```
 
+### `audio-playlist`
+
+Add multiple audio files as a single playlist.
+Optionally override the display title with a pipe `|`.
+
+```
+{{< audio-playlist >}}
+audio/01-intro.mp3 | Intro
+audio/02-track01.mp3 | Opening Theme
+audio/03-interlude.mp3
+{{< /audio-playlist >}}
+```
+
 ### `button` / `button-blank` / `button-lightbox`
 
 Display given link as a button.

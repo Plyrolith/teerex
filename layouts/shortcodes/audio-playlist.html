@@ -1,0 +1,43 @@
+{{ $page := .Page }}
+{{ $lines := split (trim .Inner "\n\r\t ") "\n" }}
+{{ $tracks := slice }}
+{{ range $lines }}
+{{ $line := trim . " \t\r" }}
+{{ if $line }}
+{{ $parts := split $line "|" }}
+{{ $path := trim (index $parts 0) " \t\"" }}
+{{ $src := $path }}
+{{ with $page.Resources.GetMatch $path }}
+{{ $src = .RelPermalink }}
+{{ end }}
+{{ $title := $path }}
+{{ if gt (len $parts) 1 }}
+{{ $title = trim (index $parts 1) " \t\"" }}
+{{ end }}
+{{ $tracks = $tracks | append (dict "src" $src "title" $title) }}
+{{ end }}
+{{ end }}
+{{ if not $tracks }}
+{{ errorf "audio-playlist shortcode: no tracks given in %s" $page.File.Path }}
+{{ end }}
+<div class="audio-playlist-container media-container" data-playlist>
+    <audio controls
+           preload="metadata"
+           class="audio-player media"
+           data-playlist-deck>
+    </audio>
+    <ol class="audio-playlist-tracks" data-playlist-tracks>
+        {{ range $i, $t := $tracks }}
+        <li class="audio-playlist-track"
+            data-playlist-track
+            data-src="{{ $t.src }}"
+            data-index="{{ $i }}">
+            <span class="audio-playlist-track-title">{{ $t.title }}</span>
+        </li>
+        {{ end }}
+    </ol>
+</div>
+{{ if not ($page.Store.Get "audio-playlist-loader") }}
+{{ $page.Store.Set "audio-playlist-loader" true }}
+<script src="/js/audio-playlist.js" defer></script>
+{{ end }}
