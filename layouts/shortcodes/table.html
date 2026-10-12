@@ -1,5 +1,9 @@
+{{- $align := lower (.Get 0 | default "left") -}}
+{{- if not (in (slice "left" "center" "right") $align) -}}
+{{- $align = "left" -}}
+{{- end -}}
 <div class="table-container">
-    <table class="shortcode-table">
+    <table class="shortcode-table" style="text-align: {{ $align }};">
         {{ .Inner }}
     </table>
 </div>

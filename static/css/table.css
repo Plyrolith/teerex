@@ -8,6 +8,7 @@
   width: 100%;
   border-collapse: collapse;
   border: 0;
+  text-align: left;
 }
 
 .shortcode-cell {

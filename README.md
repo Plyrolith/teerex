@@ -213,8 +213,12 @@ Parameters:
 
 Easy table creation with automated styling. Nested `th` shortcode will be displayed as header, nested `tr` shortcodes will be displayed as rows.
 
+Parameters:
+
+- horizontal text alignment (optional), left by default
+
 ```
-{{< table >}}
+{{< table center >}}
 {{< th Fruit Price Amount >}}
 {{< tr Apple "1$" 7 >}}
 {{< tr Pear "2$" 2 >}}
